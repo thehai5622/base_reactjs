@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import LocalStorage from "./utils/localStorage";
+import Routes from "./Routes";
 
 function App() {
   const dispatch = useDispatch();
@@ -29,7 +30,7 @@ function App() {
 
   return (
     <div className="App">
-      
+      <Routes />
     </div>
   );
 }
