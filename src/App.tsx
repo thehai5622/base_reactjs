@@ -1,24 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import LocalStorage from "./utils/localStorage";
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    // initial load
+    const accessToken = LocalStorage.getInstance().read("accessToken");
+    // TEST: token
+    // console.log(`token: ${accessToken}`);
+    if (accessToken) {
+      getProfile();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const getProfile = async () => {
+    // const resp = await userServices.getProfile();
+    // const data = resp.data;
+    // if (resp?.status === 200) {
+    //   dispatch(saveProfile(data?.data));
+    // } else if (resp?.code === "408" || resp?.code === "401") {
+    //   LocalStorage.getInstance().save("accessToken", null);
+    //   window.location.href = SIDEBAR_ITEM_HREF.home;
+    // }
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
     </div>
   );
 }
