@@ -14,7 +14,6 @@ function App() {
     if (accessToken) {
       getProfile();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getProfile = async () => {

@@ -24,7 +24,7 @@ function cookieSaveObject(key: any, data: any) {
  * @param key
  * @returns {any}
  */
-function cookieReadObject(key: any) {
+function cookieReadObject(key: any): any {
   if (cookie == null) {
     throw new Error("fail to read object to Cookie");
   }
