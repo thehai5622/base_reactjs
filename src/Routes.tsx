@@ -1,4 +1,3 @@
-import { useSelector } from "react-redux";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import LocalStore from "./utils/localStorage";
 import { SIDEBAR_ITEM_HREF } from "./utils/constans/sidebar";
